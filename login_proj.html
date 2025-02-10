@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <title>
+            BMW login page
+        </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./login_css_proj.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    </head>
+    <body><br><br>
+       <h1 class="head" style="align-items: center;"><strong> BMW</strong></h1>
+       <!-- <h4 class="subhead" style="align-items: center;">MOTORRAD</h4> -->
+       <form><!--img src="./bmw-2964072_640.jpg"  alt="BMW img" width="100%" height="100%"-->
+        <label>BMW ID(email address)</label><br><br>
+        <input type="text" class="bor" placeholder="Enter a email address" id="i1"><br><br>
+        <label>Password</label><br><br>
+        <input type="password" class="bor" placeholder="Enter a password" id="i2"><br><br>
+        <a href=""><h5 class="fpass" style="color: aliceblue;">Forget password?</h5></a>
+        <center><a href="./html_proj.html"><input class="button1" type="button" value="login" onclick="validate()"></a> </center>
+       </form>
+       <script>
+        function validate(){
+            var n1=document.getElementById("i1").value;
+            var n2=document.getElementById("i2").value;
+            email=/^[a-zA-Z0-9+_-]+@[a-zA-Z0-9.-]+$/
+            pass=/^(?=.[A-Z])(?=.[a-z])(?=.[0-9])(?=.[!@#$%^&*]).+$/
+            if(n1==""){alert("Please enter the BMW Id");}
+            else if(!email.test(n1)){
+                alert("Use the correct format");
+            }
+            if(n2==""){
+                alert("Please enter the password");
+            }
+            else if(!pass.test(n2)){
+                alert("Use the correct password to login");
+            }
+            else{alert("Login successful");}
+        }
+       </script>
+    </body>
+ </html>
